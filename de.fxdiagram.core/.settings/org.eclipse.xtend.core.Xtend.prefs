@@ -1,3 +1,5 @@
+//outlet.DEFAULT_OUTPUT.sourceFolder.src/main/java.directory=xtend-gen
+BuilderConfiguration.is_project_specific=true
 eclipse.preferences.version=1
 is_project_specific=true
 org.eclipse.xtend.core.validation.IssueCodes.dispatch_plain_function_name_clash=warning
@@ -15,3 +17,6 @@ org.eclipse.xtext.xbase.validation.IssueCodes.obsolete_cast=org.eclipse.jdt.core
 org.eclipse.xtext.xbase.validation.IssueCodes.obsolete_instanceof=org.eclipse.jdt.core.compiler.problem.unnecessaryTypeCheck\:warning
 org.eclipse.xtext.xbase.validation.IssueCodes.unhandled_exception=ignore
 org.eclipse.xtext.xbase.validation.IssueCodes.unused_local_variable=org.eclipse.jdt.core.compiler.problem.unusedLocal\:warning
+outlet.DEFAULT_OUTPUT.hideLocalSyntheticVariables=true
+outlet.DEFAULT_OUTPUT.installDslAsPrimarySource=false
+outlet.DEFAULT_OUTPUT.userOutputPerSourceFolder=true

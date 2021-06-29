@@ -74,7 +74,7 @@ public class LcarsQueryTask extends Task<Void> {
       final Function1<LcarsNode, String> _function_4 = (LcarsNode it) -> {
         return it.getDomainObjectDescriptor().getId();
       };
-      final Set<String> alreadyConnected = IterableExtensions.<String>toSet(IterableExtensions.<LcarsNode, String>map(Iterables.<LcarsNode>filter(Iterables.<XNode>concat(_map, _map_1), LcarsNode.class), _function_4));
+      final Set<String> alreadyConnected = IterableExtensions.<String>toSet(IterableExtensions.<LcarsNode, String>map(Iterables.<LcarsNode>filter((Iterables.<XNode>concat(_map, _map_1)), LcarsNode.class), _function_4));
       alreadyConnected.add(lcarsNode.getDomainObjectDescriptor().getId());
       final Function1<DBObject, Boolean> _function_5 = (DBObject it) -> {
         boolean _contains = alreadyConnected.contains(it.get("_id").toString());

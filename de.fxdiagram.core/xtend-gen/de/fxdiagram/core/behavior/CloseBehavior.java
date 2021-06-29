@@ -4,5 +4,5 @@ import de.fxdiagram.core.behavior.Behavior;
 
 @SuppressWarnings("all")
 public interface CloseBehavior extends Behavior {
-  public abstract void close();
+  void close();
 }

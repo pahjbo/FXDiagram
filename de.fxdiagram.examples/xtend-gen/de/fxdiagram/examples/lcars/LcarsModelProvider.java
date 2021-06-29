@@ -63,7 +63,6 @@ public class LcarsModelProvider implements DomainObjectProvider {
       return this.db.collectionExists("lcars");
     } catch (final Throwable _t) {
       if (_t instanceof Exception) {
-        final Exception e = (Exception)_t;
         return false;
       } else {
         throw Exceptions.sneakyThrow(_t);

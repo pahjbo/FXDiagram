@@ -23,8 +23,7 @@ public class JavaProperty {
     final int prime = 31;
     int result = 1;
     result = prime * result + ((this.name== null) ? 0 : this.name.hashCode());
-    result = prime * result + ((this.type== null) ? 0 : this.type.hashCode());
-    return result;
+    return prime * result + ((this.type== null) ? 0 : this.type.hashCode());
   }
   
   @Override

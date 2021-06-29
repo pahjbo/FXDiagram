@@ -11,19 +11,19 @@ import de.fxdiagram.core.command.AnimationCommand;
  */
 @SuppressWarnings("all")
 public interface ReconcileBehavior extends Behavior {
-  public interface UpdateAcceptor {
-    public abstract void delete(final XShape shape, final XDiagram diagram);
+  interface UpdateAcceptor {
+    void delete(final XShape shape, final XDiagram diagram);
     
-    public abstract void add(final XShape shape, final XDiagram diagram);
+    void add(final XShape shape, final XDiagram diagram);
     
-    public abstract void morph(final AnimationCommand command);
+    void morph(final AnimationCommand command);
   }
   
-  public abstract DirtyState getDirtyState();
+  DirtyState getDirtyState();
   
-  public abstract void showDirtyState(final DirtyState dirtyState);
+  void showDirtyState(final DirtyState dirtyState);
   
-  public abstract void hideDirtyState();
+  void hideDirtyState();
   
-  public abstract void reconcile(final ReconcileBehavior.UpdateAcceptor acceptor);
+  void reconcile(final ReconcileBehavior.UpdateAcceptor acceptor);
 }

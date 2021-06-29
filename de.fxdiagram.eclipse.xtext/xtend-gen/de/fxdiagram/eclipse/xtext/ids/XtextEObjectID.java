@@ -18,7 +18,7 @@ import org.eclipse.xtext.resource.XtextResource;
 
 @SuppressWarnings("all")
 public interface XtextEObjectID {
-  public static class Factory {
+  class Factory {
     public XtextEObjectID createXtextEObjectID(final EObject it) {
       QualifiedName currentName = this.getQualifiedName(it);
       if ((currentName != null)) {
@@ -80,15 +80,15 @@ public interface XtextEObjectID {
     }
   }
   
-  public abstract QualifiedName getQualifiedName();
+  QualifiedName getQualifiedName();
   
-  public abstract URI getURI();
+  URI getURI();
   
-  public abstract EClass getEClass();
+  EClass getEClass();
   
-  public abstract EObject resolve(final ResourceSet resourceSet);
+  EObject resolve(final ResourceSet resourceSet);
   
-  public abstract IEObjectDescription findInIndex(final IResourceDescriptions index);
+  IEObjectDescription findInIndex(final IResourceDescriptions index);
   
-  public abstract IResourceServiceProvider getResourceServiceProvider();
+  IResourceServiceProvider getResourceServiceProvider();
 }

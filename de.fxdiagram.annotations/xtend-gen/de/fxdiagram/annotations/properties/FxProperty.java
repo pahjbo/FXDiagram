@@ -19,6 +19,7 @@ import org.eclipse.xtend.lib.macro.Active;
  */
 @Active(FxPropertyCompilationParticipant.class)
 @Target(ElementType.FIELD)
+@SuppressWarnings("all")
 public @interface FxProperty {
   public boolean readOnly() default false;
 }

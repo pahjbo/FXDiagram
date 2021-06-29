@@ -48,15 +48,15 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 @ModelNode("inflated")
 @SuppressWarnings("all")
 public class BundleNode extends BaseNode<BundleDescription> implements INodeWithLazyMappings {
-  public final static String BUNDLE_SYMBOLIC_NAME = "bundleSymbolicName";
+  public static final String BUNDLE_SYMBOLIC_NAME = "bundleSymbolicName";
   
-  public final static String BUNDLE_VERSION = "bundleVersion";
+  public static final String BUNDLE_VERSION = "bundleVersion";
   
-  public final static String BUNDLE_NAME = "bundleName";
+  public static final String BUNDLE_NAME = "bundleName";
   
-  public final static String BUNDLE_PROVIDER = "bundleProvider";
+  public static final String BUNDLE_PROVIDER = "bundleProvider";
   
-  public final static String BUNDLE_EXECUTION_ENVIRONMENT = "bundleExecutionEnvironment";
+  public static final String BUNDLE_EXECUTION_ENVIRONMENT = "bundleExecutionEnvironment";
   
   private Inflator detailsInflator;
   

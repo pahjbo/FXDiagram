@@ -84,7 +84,6 @@ public class DiagramMappingCall<RESULT extends Object, ARG extends Object> imple
     int result = 1;
     result = prime * result + ((this.selector== null) ? 0 : this.selector.hashCode());
     result = prime * result + ((this.diagramMapping== null) ? 0 : this.diagramMapping.hashCode());
-    result = prime * result + (this.onDemand ? 1231 : 1237);
-    return result;
+    return prime * result + (this.onDemand ? 1231 : 1237);
   }
 }

@@ -51,8 +51,7 @@ public class MoveBehavior<T extends XShape> extends AbstractHostBehavior<T> {
       result = prime * result + (int) (Double.doubleToLongBits(this.initialY) ^ (Double.doubleToLongBits(this.initialY) >>> 32));
       result = prime * result + (int) (Double.doubleToLongBits(this.mouseAnchorX) ^ (Double.doubleToLongBits(this.mouseAnchorX) >>> 32));
       result = prime * result + (int) (Double.doubleToLongBits(this.mouseAnchorY) ^ (Double.doubleToLongBits(this.mouseAnchorY) >>> 32));
-      result = prime * result + ((this.initialPosInScene== null) ? 0 : this.initialPosInScene.hashCode());
-      return result;
+      return prime * result + ((this.initialPosInScene== null) ? 0 : this.initialPosInScene.hashCode());
     }
     
     @Override

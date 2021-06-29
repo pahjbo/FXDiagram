@@ -14,6 +14,7 @@ import org.eclipse.xtend.lib.macro.Active;
  */
 @Active(ModelNodeProcessor.class)
 @Target(ElementType.TYPE)
+@SuppressWarnings("all")
 public @interface ModelNode {
   public String[] value() default {};
   public boolean inherit() default true;

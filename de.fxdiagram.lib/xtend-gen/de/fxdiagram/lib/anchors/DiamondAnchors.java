@@ -9,7 +9,7 @@ import javafx.geometry.Side;
 
 @SuppressWarnings("all")
 public class DiamondAnchors extends AbstractAnchors {
-  private final static int CORNER_DELTA = 4;
+  private static final int CORNER_DELTA = 4;
   
   public DiamondAnchors(final XNode host) {
     super(host);

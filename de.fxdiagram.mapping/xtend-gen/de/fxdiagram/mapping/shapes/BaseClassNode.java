@@ -104,15 +104,15 @@ public class BaseClassNode<T extends Object> extends FlipNode implements INodeWi
     }
   }
   
-  public final static String CLASS_NAME = "className";
+  public static final String CLASS_NAME = "className";
   
-  public final static String FILE_NAME = "fileName";
+  public static final String FILE_NAME = "fileName";
   
-  public final static String PACKAGE = "package";
+  public static final String PACKAGE = "package";
   
-  public final static String ATTRIBUTE = "attribute";
+  public static final String ATTRIBUTE = "attribute";
   
-  public final static String OPERATION = "operation";
+  public static final String OPERATION = "operation";
   
   protected CheckBox packageBox;
   

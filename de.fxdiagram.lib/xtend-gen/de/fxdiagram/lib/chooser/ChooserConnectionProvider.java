@@ -6,5 +6,5 @@ import de.fxdiagram.core.model.DomainObjectDescriptor;
 
 @SuppressWarnings("all")
 public interface ChooserConnectionProvider {
-  public abstract XConnection getConnection(final XNode host, final XNode choice, final DomainObjectDescriptor choiceInfo);
+  XConnection getConnection(final XNode host, final XNode choice, final DomainObjectDescriptor choiceInfo);
 }

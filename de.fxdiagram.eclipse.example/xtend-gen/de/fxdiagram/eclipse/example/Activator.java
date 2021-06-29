@@ -5,7 +5,7 @@ import org.osgi.framework.BundleContext;
 
 @SuppressWarnings("all")
 public class Activator extends AbstractUIPlugin {
-  public final static String PLUGIN_ID = "de.fxdiagram.eclipse";
+  public static final String PLUGIN_ID = "de.fxdiagram.eclipse";
   
   private static Activator plugin;
   

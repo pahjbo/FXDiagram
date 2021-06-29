@@ -27,8 +27,7 @@ public class ResourceHandle {
     int result = 1;
     result = prime * result + ((this.name== null) ? 0 : this.name.hashCode());
     result = prime * result + ((this.context== null) ? 0 : this.context.hashCode());
-    result = prime * result + ((this.relativePath== null) ? 0 : this.relativePath.hashCode());
-    return result;
+    return prime * result + ((this.relativePath== null) ? 0 : this.relativePath.hashCode());
   }
   
   @Override

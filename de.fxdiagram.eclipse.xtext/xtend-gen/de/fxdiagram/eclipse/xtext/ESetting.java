@@ -45,8 +45,7 @@ public class ESetting<ECLASS extends EObject> {
     int result = 1;
     result = prime * result + ((this.owner== null) ? 0 : this.owner.hashCode());
     result = prime * result + ((this.reference== null) ? 0 : this.reference.hashCode());
-    result = prime * result + this.index;
-    return result;
+    return prime * result + this.index;
   }
   
   @Override

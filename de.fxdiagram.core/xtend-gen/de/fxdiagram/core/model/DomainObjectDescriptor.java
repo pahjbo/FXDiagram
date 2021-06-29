@@ -28,5 +28,5 @@ public interface DomainObjectDescriptor extends XModelProvider {
   /**
    * @returns a human readable name for the associated domain object
    */
-  public abstract String getName();
+  String getName();
 }

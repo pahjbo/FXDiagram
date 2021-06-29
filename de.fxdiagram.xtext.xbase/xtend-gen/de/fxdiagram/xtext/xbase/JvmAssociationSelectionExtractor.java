@@ -41,7 +41,6 @@ public class JvmAssociationSelectionExtractor implements ISelectionExtractor {
           }
         } catch (final Throwable _t) {
           if (_t instanceof Exception) {
-            final Exception exc = (Exception)_t;
           } else {
             throw Exceptions.sneakyThrow(_t);
           }

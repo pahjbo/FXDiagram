@@ -126,7 +126,6 @@ public class AddDependencyPathAction extends RapidButtonAction {
             return context.getAddedShapes();
           } catch (final Throwable _t) {
             if (_t instanceof NoSuchElementException) {
-              final NoSuchElementException exc = (NoSuchElementException)_t;
               return Collections.<XShape>unmodifiableList(CollectionLiterals.<XShape>newArrayList());
             } else {
               throw Exceptions.sneakyThrow(_t);

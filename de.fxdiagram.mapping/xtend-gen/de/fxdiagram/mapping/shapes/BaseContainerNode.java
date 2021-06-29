@@ -117,7 +117,7 @@ public class BaseContainerNode<T extends Object> extends XNode implements INodeW
     }
   }
   
-  public final static String NODE_HEADING = "containerNodeHeading";
+  public static final String NODE_HEADING = "containerNodeHeading";
   
   private Group diagramGroup;
   

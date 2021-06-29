@@ -27,7 +27,6 @@ public class LabelReconcileBehavior extends AbstractReconcileBehavior<XLabel> {
         ((IMappedElementDescriptor<?>)descriptor).<Object>withDomainObject(_function);
       } catch (final Throwable _t) {
         if (_t instanceof NoSuchElementException) {
-          final NoSuchElementException e = (NoSuchElementException)_t;
           return DirtyState.DANGLING;
         } else {
           throw Exceptions.sneakyThrow(_t);

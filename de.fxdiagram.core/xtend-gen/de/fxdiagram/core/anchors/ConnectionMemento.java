@@ -156,8 +156,7 @@ public class ConnectionMemento {
     int result = 1;
     result = prime * result + ((this.connection== null) ? 0 : this.connection.hashCode());
     result = prime * result + ((this.kind== null) ? 0 : this.kind.hashCode());
-    result = prime * result + ((this.controlPoints== null) ? 0 : this.controlPoints.hashCode());
-    return result;
+    return prime * result + ((this.controlPoints== null) ? 0 : this.controlPoints.hashCode());
   }
   
   @Override

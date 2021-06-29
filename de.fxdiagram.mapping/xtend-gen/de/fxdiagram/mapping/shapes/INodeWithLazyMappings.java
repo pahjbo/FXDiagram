@@ -6,5 +6,5 @@ import javafx.geometry.Side;
 
 @SuppressWarnings("all")
 public interface INodeWithLazyMappings {
-  public abstract List<Side> getButtonSides(final ConnectionMapping<?> mapping);
+  List<Side> getButtonSides(final ConnectionMapping<?> mapping);
 }

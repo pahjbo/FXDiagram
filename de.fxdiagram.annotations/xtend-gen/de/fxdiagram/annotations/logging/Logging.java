@@ -8,5 +8,6 @@ import org.eclipse.xtend.lib.macro.Active;
  * Active annotation that adds a static final {@link Logger} to the annotated type.
  */
 @Active(LoggingProcessor.class)
+@SuppressWarnings("all")
 public @interface Logging {
 }

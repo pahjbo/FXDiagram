@@ -107,7 +107,7 @@ public class AddControlPointBehavior extends AbstractHostBehavior<XConnection> {
     };
     final ConnectionExtensions.PointOnCurve nearestPoint = ConnectionExtensions.getNearestPointOnQuadraticSpline(localPosition, ListExtensions.<XControlPoint, Point2D>map(this.getHost().getControlPoints(), _function));
     Node _node = this.getHost().getNode();
-    final QuadCurve splineSegment = ((QuadCurve[])Conversions.unwrapArray(Iterables.<QuadCurve>filter(((Group) _node).getChildren(), QuadCurve.class), QuadCurve.class))[nearestPoint.getSegmentIndex()];
+    final QuadCurve splineSegment = ((QuadCurve[])Conversions.unwrapArray((Iterables.<QuadCurve>filter(((Group) _node).getChildren(), QuadCurve.class)), QuadCurve.class))[nearestPoint.getSegmentIndex()];
     final List<QuadCurve> splitSegments = BezierExtensions.splitAt(splineSegment, nearestPoint.getLocalParameter());
     ObservableList<XControlPoint> _controlPoints = this.getHost().getControlPoints();
     final ArrayList<XControlPoint> oldControlPoints = new ArrayList<XControlPoint>(_controlPoints);
@@ -156,7 +156,7 @@ public class AddControlPointBehavior extends AbstractHostBehavior<XConnection> {
     };
     final ConnectionExtensions.PointOnCurve nearestPoint = ConnectionExtensions.getNearestPointOnCubicSpline(localPosition, ListExtensions.<XControlPoint, Point2D>map(this.getHost().getControlPoints(), _function));
     Node _node = this.getHost().getNode();
-    final CubicCurve splineSegment = ((CubicCurve[])Conversions.unwrapArray(Iterables.<CubicCurve>filter(((Group) _node).getChildren(), CubicCurve.class), CubicCurve.class))[nearestPoint.getSegmentIndex()];
+    final CubicCurve splineSegment = ((CubicCurve[])Conversions.unwrapArray((Iterables.<CubicCurve>filter(((Group) _node).getChildren(), CubicCurve.class)), CubicCurve.class))[nearestPoint.getSegmentIndex()];
     final List<CubicCurve> splitSegments = BezierExtensions.splitAt(splineSegment, nearestPoint.getLocalParameter());
     ObservableList<XControlPoint> _controlPoints = this.getHost().getControlPoints();
     final ArrayList<XControlPoint> oldControlPoints = new ArrayList<XControlPoint>(_controlPoints);

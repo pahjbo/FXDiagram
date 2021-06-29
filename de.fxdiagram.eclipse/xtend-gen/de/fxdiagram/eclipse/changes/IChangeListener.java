@@ -4,5 +4,5 @@ import org.eclipse.ui.IWorkbenchPart;
 
 @SuppressWarnings("all")
 public interface IChangeListener {
-  public abstract void partChanged(final IWorkbenchPart part);
+  void partChanged(final IWorkbenchPart part);
 }

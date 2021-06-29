@@ -5,5 +5,5 @@ import javafx.scene.Node;
 
 @SuppressWarnings("all")
 public interface SvgLinkProvider {
-  public abstract SvgLink getLink(final Node node);
+  SvgLink getLink(final Node node);
 }

@@ -84,7 +84,7 @@ public class RadialMenu extends Pane {
   }
   
   public static class ItemEvent extends Event {
-    public final static EventType<RadialMenu.ItemEvent> ITEM_SELECTED = new EventType(Event.ANY, "itemSelected");
+    public static final EventType<RadialMenu.ItemEvent> ITEM_SELECTED = new EventType(Event.ANY, "itemSelected");
     
     private MenuItem item;
     
@@ -99,13 +99,13 @@ public class RadialMenu extends Pane {
   }
   
   public static class MenuEvent extends Event {
-    public final static EventType<RadialMenu.MenuEvent> MENU_OPEN_STARTED = new EventType(Event.ANY, "menuOpenStarted");
+    public static final EventType<RadialMenu.MenuEvent> MENU_OPEN_STARTED = new EventType(Event.ANY, "menuOpenStarted");
     
-    public final static EventType<RadialMenu.MenuEvent> MENU_OPEN_FINISHED = new EventType(Event.ANY, "menuOpenFinished");
+    public static final EventType<RadialMenu.MenuEvent> MENU_OPEN_FINISHED = new EventType(Event.ANY, "menuOpenFinished");
     
-    public final static EventType<RadialMenu.MenuEvent> MENU_CLOSE_STARTED = new EventType(Event.ANY, "menuCloseStarted");
+    public static final EventType<RadialMenu.MenuEvent> MENU_CLOSE_STARTED = new EventType(Event.ANY, "menuCloseStarted");
     
-    public final static EventType<RadialMenu.MenuEvent> MENU_CLOSE_FINISHED = new EventType(Event.ANY, "menuCloseFinished");
+    public static final EventType<RadialMenu.MenuEvent> MENU_CLOSE_FINISHED = new EventType(Event.ANY, "menuCloseFinished");
     
     public MenuEvent(final Object SOURCE, final EventTarget TARGET, final EventType<RadialMenu.MenuEvent> EVENT_TYPE) {
       super(SOURCE, TARGET, EVENT_TYPE);
@@ -247,7 +247,6 @@ public class RadialMenu extends Pane {
               NODE.getChildren().add(this.createCanvasThumbnail(item));
             } catch (final Throwable _t) {
               if (_t instanceof IllegalArgumentException) {
-                final IllegalArgumentException exception = (IllegalArgumentException)_t;
                 String _string_1 = Integer.toString(i);
                 Text text_1 = new Text(_string_1);
                 double _size_2 = item.getSize();
@@ -261,15 +260,15 @@ public class RadialMenu extends Pane {
             }
           } else {
             SymbolType _symbol = item.getSymbol();
-            double _size_3 = item.getSize();
-            double _multiply_3 = (0.7 * _size_3);
-            Canvas symbol = SymbolCanvas.getSymbol(_symbol, _multiply_3, Color.WHITE);
+            double _size_2 = item.getSize();
+            double _multiply_2 = (0.7 * _size_2);
+            Canvas symbol = SymbolCanvas.getSymbol(_symbol, _multiply_2, Color.WHITE);
             NODE.getChildren().add(symbol);
           }
         }
-        double _size_4 = item.getSize();
-        double _multiply_4 = (_size_4 * 0.5);
-        Circle itemMouseCatcher = new Circle(_multiply_4);
+        double _size_3 = item.getSize();
+        double _multiply_3 = (_size_3 * 0.5);
+        Circle itemMouseCatcher = new Circle(_multiply_3);
         itemMouseCatcher.setFill(Color.TRANSPARENT);
         itemMouseCatcher.<MouseEvent>addEventFilter(MouseEvent.MOUSE_CLICKED, this.mouseHandler);
         NODE.getChildren().add(itemMouseCatcher);
@@ -282,14 +281,14 @@ public class RadialMenu extends Pane {
         Point2D position = new Point2D(_cos, _sin);
         double _x = position.getX();
         double _radius = this.options.getRadius();
-        double _multiply_5 = (_x * _radius);
-        double x = Math.round(_multiply_5);
+        double _multiply_4 = (_x * _radius);
+        double x = Math.round(_multiply_4);
         double _y = position.getY();
         double _radius_1 = this.options.getRadius();
-        double _multiply_6 = (_y * _radius_1);
-        double y = Math.round(_multiply_6);
-        int _size_5 = ITEMS.size();
-        int _divide = (200 / _size_5);
+        double _multiply_5 = (_y * _radius_1);
+        double y = Math.round(_multiply_5);
+        int _size_4 = ITEMS.size();
+        int _divide = (200 / _size_4);
         double delay = (_divide * i);
         {
           final Timeline[] _wrVal_openTimeLines = this.openTimeLines;

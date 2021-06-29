@@ -6,9 +6,9 @@ import de.fxdiagram.mapping.execution.XDiagramConfigInterpreter;
 
 @SuppressWarnings("all")
 public interface EntryCall<ARG extends Object> {
-  public abstract XDiagramConfig getConfig();
+  XDiagramConfig getConfig();
   
-  public abstract void execute(final ARG domainObject, final XDiagramConfigInterpreter interpreter, final InterpreterContext context);
+  void execute(final ARG domainObject, final XDiagramConfigInterpreter interpreter, final InterpreterContext context);
   
-  public abstract String getText();
+  String getText();
 }

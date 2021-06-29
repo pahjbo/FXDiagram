@@ -28,8 +28,7 @@ public class CrossRefData {
     int result = 1;
     result = prime * result + ((this.href== null) ? 0 : this.href.hashCode());
     result = prime * result + ((this.property== null) ? 0 : this.property.hashCode());
-    result = prime * result + this.index;
-    return result;
+    return prime * result + this.index;
   }
   
   @Override

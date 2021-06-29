@@ -43,10 +43,7 @@ public class UnqualifiedDependency extends BundleDependency {
   @Override
   @Pure
   public int hashCode() {
-    final int prime = 31;
-    int result = super.hashCode();
-    result = prime * result + ((this.dependency== null) ? 0 : this.dependency.hashCode());
-    return result;
+    return 31 * super.hashCode() + ((this.dependency== null) ? 0 : this.dependency.hashCode());
   }
   
   @Override
@@ -72,10 +69,9 @@ public class UnqualifiedDependency extends BundleDependency {
   @Override
   @Pure
   public String toString() {
-    String result = new ToStringBuilder(this)
+    return new ToStringBuilder(this)
     	.addAllFields()
     	.toString();
-    return result;
   }
   
   @Pure

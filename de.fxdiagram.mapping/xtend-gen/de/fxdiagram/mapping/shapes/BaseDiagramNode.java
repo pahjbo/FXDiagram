@@ -39,7 +39,7 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 @ModelNode
 @SuppressWarnings("all")
 public class BaseDiagramNode<T extends Object> extends OpenableDiagramNode {
-  public final static String NODE_HEADING = "diagramNodeHeading";
+  public static final String NODE_HEADING = "diagramNodeHeading";
   
   public BaseDiagramNode(final IMappedElementDescriptor<T> descriptor) {
     super(descriptor);

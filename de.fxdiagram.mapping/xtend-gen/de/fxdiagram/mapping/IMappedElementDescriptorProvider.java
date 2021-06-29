@@ -12,14 +12,14 @@ import de.fxdiagram.mapping.IMappedElementDescriptor;
  */
 @SuppressWarnings("all")
 public interface IMappedElementDescriptorProvider extends DomainObjectProvider, XModelProvider {
-  public abstract <T extends Object> IMappedElementDescriptor<T> createMappedElementDescriptor(final T domainObject, final AbstractMapping<? extends T> mapping);
+  <T extends Object> IMappedElementDescriptor<T> createMappedElementDescriptor(final T domainObject, final AbstractMapping<? extends T> mapping);
   
   @Override
-  public default boolean isTransient() {
+  default boolean isTransient() {
     return true;
   }
   
   @Override
-  public default void populate(final ModelElementImpl element) {
+  default void populate(final ModelElementImpl element) {
   }
 }

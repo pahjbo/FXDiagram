@@ -61,11 +61,11 @@ public abstract class AbstractLabelOwnerReconcileBehavior<T extends Object, SHAP
   }
   
   public interface AddKeepRemoveAcceptor {
-    public abstract void add(final XLabel label);
+    void add(final XLabel label);
     
-    public abstract void keep(final XLabel label);
+    void keep(final XLabel label);
     
-    public abstract void remove(final XLabel label);
+    void remove(final XLabel label);
   }
   
   @Accessors(AccessorType.PROTECTED_GETTER)
@@ -88,7 +88,6 @@ public abstract class AbstractLabelOwnerReconcileBehavior<T extends Object, SHAP
         return descriptor.<DirtyState>withDomainObject(_function);
       } catch (final Throwable _t) {
         if (_t instanceof NoSuchElementException) {
-          final NoSuchElementException e = (NoSuchElementException)_t;
           return DirtyState.DANGLING;
         } else {
           throw Exceptions.sneakyThrow(_t);
@@ -178,7 +177,6 @@ public abstract class AbstractLabelOwnerReconcileBehavior<T extends Object, SHAP
           descriptor.<Object>withDomainObject(_function_1);
         } catch (final Throwable _t) {
           if (_t instanceof NoSuchElementException) {
-            final NoSuchElementException e = (NoSuchElementException)_t;
           } else {
             throw Exceptions.sneakyThrow(_t);
           }
@@ -218,7 +216,6 @@ public abstract class AbstractLabelOwnerReconcileBehavior<T extends Object, SHAP
         descriptor.<Object>withDomainObject(_function);
       } catch (final Throwable _t) {
         if (_t instanceof NoSuchElementException) {
-          final NoSuchElementException exc = (NoSuchElementException)_t;
           acceptor.delete(this.getHost(), CoreExtensions.getDiagram(this.getHost()));
         } else {
           throw Exceptions.sneakyThrow(_t);

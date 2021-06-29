@@ -8,7 +8,7 @@ import org.junit.Test;
 
 @SuppressWarnings("all")
 public class ClippingTest {
-  private final static double EPS = 1E-6;
+  private static final double EPS = 1E-6;
   
   @Test
   public void boundsInLocalConsiderClipping() {

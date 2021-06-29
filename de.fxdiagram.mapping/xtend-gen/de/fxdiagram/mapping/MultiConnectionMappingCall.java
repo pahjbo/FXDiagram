@@ -26,8 +26,7 @@ public class MultiConnectionMappingCall<RESULT extends Object, ARG extends Objec
     final int prime = 31;
     int result = 1;
     result = prime * result + ((this.selector== null) ? 0 : this.selector.hashCode());
-    result = prime * result + ((this.connectionMapping== null) ? 0 : this.connectionMapping.hashCode());
-    return result;
+    return prime * result + ((this.connectionMapping== null) ? 0 : this.connectionMapping.hashCode());
   }
   
   @Override
@@ -56,10 +55,9 @@ public class MultiConnectionMappingCall<RESULT extends Object, ARG extends Objec
   @Override
   @Pure
   public String toString() {
-    String result = new ToStringBuilder(this)
+    return new ToStringBuilder(this)
     	.addAllFields()
     	.toString();
-    return result;
   }
   
   @Pure

@@ -29,11 +29,11 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 @ModelNode
 @SuppressWarnings("all")
 public class EntityNode extends BaseNode<Entity> {
-  public final static String ENTITY_NAME = "entityName";
+  public static final String ENTITY_NAME = "entityName";
   
-  public final static String ATTRIBUTE = "attribute";
+  public static final String ATTRIBUTE = "attribute";
   
-  public final static String OPERATION = "operation";
+  public static final String OPERATION = "operation";
   
   private VBox nameCompartment;
   

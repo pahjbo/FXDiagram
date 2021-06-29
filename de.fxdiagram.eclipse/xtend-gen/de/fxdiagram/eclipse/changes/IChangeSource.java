@@ -5,7 +5,7 @@ import org.eclipse.ui.IWorkbenchPart;
 
 @SuppressWarnings("all")
 public interface IChangeSource {
-  public abstract void addChangeListener(final IWorkbenchPart part, final ModelChangeBroker broker);
+  void addChangeListener(final IWorkbenchPart part, final ModelChangeBroker broker);
   
-  public abstract void removeChangeListener(final IWorkbenchPart part, final ModelChangeBroker broker);
+  void removeChangeListener(final IWorkbenchPart part, final ModelChangeBroker broker);
 }

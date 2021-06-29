@@ -12,11 +12,11 @@ import javafx.scene.input.KeyEvent;
  */
 @SuppressWarnings("all")
 public interface DiagramAction {
-  public abstract boolean matches(final KeyEvent event);
+  boolean matches(final KeyEvent event);
   
-  public abstract SymbolType getSymbol();
+  SymbolType getSymbol();
   
-  public abstract String getTooltip();
+  String getTooltip();
   
-  public abstract void perform(final XRoot root);
+  void perform(final XRoot root);
 }

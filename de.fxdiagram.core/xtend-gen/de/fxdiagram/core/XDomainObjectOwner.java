@@ -5,7 +5,7 @@ import javafx.beans.property.ReadOnlyObjectProperty;
 
 @SuppressWarnings("all")
 public interface XDomainObjectOwner {
-  public abstract DomainObjectDescriptor getDomainObjectDescriptor();
+  DomainObjectDescriptor getDomainObjectDescriptor();
   
-  public abstract ReadOnlyObjectProperty<DomainObjectDescriptor> domainObjectDescriptorProperty();
+  ReadOnlyObjectProperty<DomainObjectDescriptor> domainObjectDescriptorProperty();
 }

@@ -35,7 +35,7 @@ import org.eclipse.xtext.xbase.lib.ListExtensions;
 
 @SuppressWarnings("all")
 public class BundleUtil {
-  private final static Logger LOG = Logger.getLogger(BundleUtil.class);
+  private static final Logger LOG = Logger.getLogger(BundleUtil.class);
   
   private static boolean isConsiderFragments;
   

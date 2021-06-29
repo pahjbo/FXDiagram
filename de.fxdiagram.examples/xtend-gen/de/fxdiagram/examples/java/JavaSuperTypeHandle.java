@@ -23,8 +23,7 @@ public class JavaSuperTypeHandle {
     final int prime = 31;
     int result = 1;
     result = prime * result + ((this.subType== null) ? 0 : this.subType.hashCode());
-    result = prime * result + ((this.superType== null) ? 0 : this.superType.hashCode());
-    return result;
+    return prime * result + ((this.superType== null) ? 0 : this.superType.hashCode());
   }
   
   @Override

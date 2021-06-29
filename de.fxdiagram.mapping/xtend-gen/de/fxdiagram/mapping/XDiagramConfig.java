@@ -31,7 +31,7 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 @SuppressWarnings("all")
 public interface XDiagramConfig {
   @Logging
-  public static class Registry {
+  class Registry {
     private static XDiagramConfig.Registry instance;
     
     private Map<String, XDiagramConfig> configs = CollectionLiterals.<String, XDiagramConfig>newHashMap();
@@ -107,19 +107,19 @@ public interface XDiagramConfig {
   /**
    * @return all possible calls to add a diagram element for the given domain object
    */
-  public abstract <ARG extends Object> Iterable<? extends EntryCall<ARG>> getEntryCalls(final ARG domainObject);
+  <ARG extends Object> Iterable<? extends EntryCall<ARG>> getEntryCalls(final ARG domainObject);
   
-  public abstract Iterable<? extends AbstractMapping<?>> getMappings();
+  Iterable<? extends AbstractMapping<?>> getMappings();
   
-  public abstract AbstractMapping<?> getMappingByID(final String mappingID);
+  AbstractMapping<?> getMappingByID(final String mappingID);
   
-  public abstract String getID();
+  String getID();
   
-  public abstract String getLabel();
+  String getLabel();
   
-  public abstract <ARG extends Object> void addMapping(final AbstractMapping<ARG> mapping);
+  <ARG extends Object> void addMapping(final AbstractMapping<ARG> mapping);
   
-  public abstract IMappedElementDescriptorProvider getDomainObjectProvider();
+  IMappedElementDescriptorProvider getDomainObjectProvider();
   
   /**
    * Hook for common configuration for a specific kind of shape, e.g. force a certain
@@ -128,5 +128,5 @@ public interface XDiagramConfig {
    * All base shapes call this in {@link XModelProvider#postLoad()} as such allow to override
    * the saved configuration.
    */
-  public abstract void initialize(final XDomainObjectOwner shape);
+  void initialize(final XDomainObjectOwner shape);
 }

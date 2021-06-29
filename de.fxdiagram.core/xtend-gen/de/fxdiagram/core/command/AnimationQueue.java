@@ -21,7 +21,7 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 @SuppressWarnings("all")
 public class AnimationQueue {
   public interface Listener {
-    public abstract void handleQueueEmpty();
+    void handleQueueEmpty();
   }
   
   private Queue<Function0<? extends Animation>> queue = CollectionLiterals.<Function0<? extends Animation>>newLinkedList();

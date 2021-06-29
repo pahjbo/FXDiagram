@@ -46,7 +46,7 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure2;
 
 @SuppressWarnings("all")
 public class EcoreDiagramConfig extends AbstractEclipseDiagramConfig {
-  private final static double EREFERENCE_LABEL_POS = 0.2;
+  private static final double EREFERENCE_LABEL_POS = 0.2;
   
   private final DiagramMapping<EPackage> ePackageDiagram = new DiagramMapping<EPackage>(this, "ePackageDiagram", "EPackage diagram") {
     @Override

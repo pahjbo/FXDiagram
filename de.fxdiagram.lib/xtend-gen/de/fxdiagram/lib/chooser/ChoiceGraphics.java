@@ -7,13 +7,13 @@ import javafx.scene.Node;
 
 @SuppressWarnings("all")
 public interface ChoiceGraphics extends XActivatable {
-  public abstract void setInterpolatedPosition(final double interpolatedPosition);
+  void setInterpolatedPosition(final double interpolatedPosition);
   
-  public abstract void nodeChosen(final XNode choice);
+  void nodeChosen(final XNode choice);
   
-  public abstract void relocateButtons(final Node minusButton, final Node plusButton);
+  void relocateButtons(final Node minusButton, final Node plusButton);
   
-  public abstract boolean hasButtons();
+  boolean hasButtons();
   
-  public abstract void setChooser(final AbstractBaseChooser chooser);
+  void setChooser(final AbstractBaseChooser chooser);
 }

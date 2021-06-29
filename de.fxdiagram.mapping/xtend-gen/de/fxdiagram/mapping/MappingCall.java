@@ -25,5 +25,5 @@ import de.fxdiagram.mapping.AbstractMapping;
  */
 @SuppressWarnings("all")
 public interface MappingCall<RESULT extends Object, ARG extends Object> {
-  public abstract AbstractMapping<RESULT> getMapping();
+  AbstractMapping<RESULT> getMapping();
 }

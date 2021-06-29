@@ -122,9 +122,9 @@ public class Point2DExtensions {
     return (((((x1 - x0) * (y1 + y0)) + ((x2 - x1) * (y2 + y1))) + ((x0 - x2) * (y0 + y2))) > 0);
   }
   
-  public final static int EPSILON_DEGREES = 5;
+  public static final int EPSILON_DEGREES = 5;
   
-  private final static double COS_EPSILON = Math.cos(((Point2DExtensions.EPSILON_DEGREES * Math.PI) / 180));
+  private static final double COS_EPSILON = Math.cos(((Point2DExtensions.EPSILON_DEGREES * Math.PI) / 180));
   
   @Pure
   public static boolean areOnSameLine(final Point2D x0, final Point2D x1, final Point2D x2) {

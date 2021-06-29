@@ -45,10 +45,7 @@ public class FragmentHost extends BundleDependency {
   @Override
   @Pure
   public int hashCode() {
-    final int prime = 31;
-    int result = super.hashCode();
-    result = prime * result + ((this.fragment== null) ? 0 : this.fragment.hashCode());
-    return result;
+    return 31 * super.hashCode() + ((this.fragment== null) ? 0 : this.fragment.hashCode());
   }
   
   @Override
@@ -74,10 +71,9 @@ public class FragmentHost extends BundleDependency {
   @Override
   @Pure
   public String toString() {
-    String result = new ToStringBuilder(this)
+    return new ToStringBuilder(this)
     	.addAllFields()
     	.toString();
-    return result;
   }
   
   @Pure

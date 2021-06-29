@@ -11,5 +11,5 @@ import de.fxdiagram.core.XShape;
  */
 @SuppressWarnings("all")
 public interface Behavior extends XActivatable {
-  public abstract Class<? extends Behavior> getBehaviorKey();
+  Class<? extends Behavior> getBehaviorKey();
 }

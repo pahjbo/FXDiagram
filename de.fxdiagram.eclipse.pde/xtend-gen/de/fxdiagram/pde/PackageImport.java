@@ -66,10 +66,7 @@ public class PackageImport extends BundleDependency {
   @Override
   @Pure
   public int hashCode() {
-    final int prime = 31;
-    int result = super.hashCode();
-    result = prime * result + ((this.packageImport== null) ? 0 : this.packageImport.hashCode());
-    return result;
+    return 31 * super.hashCode() + ((this.packageImport== null) ? 0 : this.packageImport.hashCode());
   }
   
   @Override
@@ -95,10 +92,9 @@ public class PackageImport extends BundleDependency {
   @Override
   @Pure
   public String toString() {
-    String result = new ToStringBuilder(this)
+    return new ToStringBuilder(this)
     	.addAllFields()
     	.toString();
-    return result;
   }
   
   @Pure

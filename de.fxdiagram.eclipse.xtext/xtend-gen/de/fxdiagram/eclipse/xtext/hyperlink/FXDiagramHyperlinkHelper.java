@@ -126,8 +126,7 @@ public class FXDiagramHyperlinkHelper extends HyperlinkHelper {
       result = prime * result + ((this.descriptor== null) ? 0 : this.descriptor.hashCode());
       result = prime * result + ((this.entryCall== null) ? 0 : this.entryCall.hashCode());
       result = prime * result + ((this.region== null) ? 0 : this.region.hashCode());
-      result = prime * result + ((this.editor== null) ? 0 : this.editor.hashCode());
-      return result;
+      return prime * result + ((this.editor== null) ? 0 : this.editor.hashCode());
     }
     
     @Override
@@ -195,7 +194,7 @@ public class FXDiagramHyperlinkHelper extends HyperlinkHelper {
     }
   }
   
-  public final static String DELEGATE = "de.fxdiagram.eclipse.xtext.FXDiagramHyperlinkHelper.Delegate";
+  public static final String DELEGATE = "de.fxdiagram.eclipse.xtext.FXDiagramHyperlinkHelper.Delegate";
   
   @Inject
   @Named(FXDiagramHyperlinkHelper.DELEGATE)

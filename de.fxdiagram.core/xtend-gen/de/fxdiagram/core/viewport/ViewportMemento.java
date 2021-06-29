@@ -46,8 +46,7 @@ public class ViewportMemento {
     result = prime * result + (int) (Double.doubleToLongBits(this.translateX) ^ (Double.doubleToLongBits(this.translateX) >>> 32));
     result = prime * result + (int) (Double.doubleToLongBits(this.translateY) ^ (Double.doubleToLongBits(this.translateY) >>> 32));
     result = prime * result + (int) (Double.doubleToLongBits(this.scale) ^ (Double.doubleToLongBits(this.scale) >>> 32));
-    result = prime * result + (int) (Double.doubleToLongBits(this.rotate) ^ (Double.doubleToLongBits(this.rotate) >>> 32));
-    return result;
+    return prime * result + (int) (Double.doubleToLongBits(this.rotate) ^ (Double.doubleToLongBits(this.rotate) >>> 32));
   }
   
   @Override

@@ -37,7 +37,7 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
  */
 @SuppressWarnings("all")
 public class ShapeConverterExtensions {
-  private final static double KAPPA = 0.5522847498307935;
+  private static final double KAPPA = 0.5522847498307935;
   
   public static SVGPath toSvgPath(final Shape shape) {
     SVGPath _sVGPath = new SVGPath();

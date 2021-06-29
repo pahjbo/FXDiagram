@@ -112,7 +112,6 @@ public class ClassLoaderExtensions {
       return Platform.isRunning();
     } catch (final Throwable _t) {
       if (_t instanceof Throwable) {
-        final Throwable exc = (Throwable)_t;
         return false;
       } else {
         throw Exceptions.sneakyThrow(_t);

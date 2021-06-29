@@ -73,9 +73,9 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 @ModelNode
 @SuppressWarnings("all")
 public class LcarsNode extends XNode {
-  private final static Map<String, List<String>> PAGE_STRUCTURE = Collections.<String, List<String>>unmodifiableMap(CollectionLiterals.<String, List<String>>newHashMap(Pair.<String, List<String>>of("person", Collections.<String>unmodifiableList(CollectionLiterals.<String>newArrayList("gender", "species", "born", "status", "died", "marital_status"))), Pair.<String, List<String>>of("profession", Collections.<String>unmodifiableList(CollectionLiterals.<String>newArrayList("occupation", "affiliation", "rank", "serial_number"))), Pair.<String, List<String>>of("family", Collections.<String>unmodifiableList(CollectionLiterals.<String>newArrayList("spouses", "children", "mother", "father", "siblings", "other_relatives")))));
+  private static final Map<String, List<String>> PAGE_STRUCTURE = Collections.<String, List<String>>unmodifiableMap(CollectionLiterals.<String, List<String>>newHashMap(Pair.<String, List<String>>of("person", Collections.<String>unmodifiableList(CollectionLiterals.<String>newArrayList("gender", "species", "born", "status", "died", "marital_status"))), Pair.<String, List<String>>of("profession", Collections.<String>unmodifiableList(CollectionLiterals.<String>newArrayList("occupation", "affiliation", "rank", "serial_number"))), Pair.<String, List<String>>of("family", Collections.<String>unmodifiableList(CollectionLiterals.<String>newArrayList("spouses", "children", "mother", "father", "siblings", "other_relatives")))));
   
-  private final static List<String> pageOrder = Collections.<String>unmodifiableList(CollectionLiterals.<String>newArrayList("person", "profession", "family", "other"));
+  private static final List<String> pageOrder = Collections.<String>unmodifiableList(CollectionLiterals.<String>newArrayList("person", "profession", "family", "other"));
   
   @Extension
   private NameShortener _nameShortener = new NameShortener();

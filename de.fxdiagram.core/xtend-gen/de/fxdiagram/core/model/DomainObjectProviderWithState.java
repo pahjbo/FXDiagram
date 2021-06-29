@@ -9,5 +9,5 @@ import de.fxdiagram.core.model.DomainObjectProvider;
  */
 @SuppressWarnings("all")
 public interface DomainObjectProviderWithState extends DomainObjectProvider {
-  public abstract void copyState(final DomainObjectProviderWithState from);
+  void copyState(final DomainObjectProviderWithState from);
 }

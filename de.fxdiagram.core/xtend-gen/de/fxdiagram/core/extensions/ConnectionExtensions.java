@@ -53,8 +53,7 @@ public class ConnectionExtensions {
       result = prime * result + (int) (Double.doubleToLongBits(this.localParameter) ^ (Double.doubleToLongBits(this.localParameter) >>> 32));
       result = prime * result + (int) (Double.doubleToLongBits(this.parameter) ^ (Double.doubleToLongBits(this.parameter) >>> 32));
       result = prime * result + this.segmentIndex;
-      result = prime * result + (int) (Double.doubleToLongBits(this.distance) ^ (Double.doubleToLongBits(this.distance) >>> 32));
-      return result;
+      return prime * result + (int) (Double.doubleToLongBits(this.distance) ^ (Double.doubleToLongBits(this.distance) >>> 32));
     }
     
     @Override

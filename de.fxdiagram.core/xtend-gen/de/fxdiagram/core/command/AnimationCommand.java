@@ -14,20 +14,20 @@ import javafx.animation.Animation;
  */
 @SuppressWarnings("all")
 public interface AnimationCommand {
-  public abstract Animation getExecuteAnimation(final CommandContext context);
+  Animation getExecuteAnimation(final CommandContext context);
   
-  public abstract Animation getUndoAnimation(final CommandContext context);
+  Animation getUndoAnimation(final CommandContext context);
   
-  public abstract Animation getRedoAnimation(final CommandContext context);
+  Animation getRedoAnimation(final CommandContext context);
   
-  public abstract boolean clearRedoStackOnExecute();
+  boolean clearRedoStackOnExecute();
   
   /**
    * Consider package private. Clients should not override this.
    */
-  public abstract void skipViewportRestore();
+  void skipViewportRestore();
   
-  public final static AnimationCommand NOOP = new AnimationCommand() {
+  static final AnimationCommand NOOP = new AnimationCommand() {
     @Override
     public Animation getExecuteAnimation(final CommandContext context) {
       return null;

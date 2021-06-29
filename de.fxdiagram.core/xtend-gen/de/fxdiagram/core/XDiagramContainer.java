@@ -9,13 +9,13 @@ import javafx.geometry.Insets;
  */
 @SuppressWarnings("all")
 public interface XDiagramContainer {
-  public abstract XDiagram getInnerDiagram();
+  XDiagram getInnerDiagram();
   
-  public abstract void setInnerDiagram(final XDiagram diagram);
+  void setInnerDiagram(final XDiagram diagram);
   
-  public abstract ObjectProperty<XDiagram> innerDiagramProperty();
+  ObjectProperty<XDiagram> innerDiagramProperty();
   
-  public abstract boolean isInnerDiagramActive();
+  boolean isInnerDiagramActive();
   
-  public abstract Insets getInsets();
+  Insets getInsets();
 }

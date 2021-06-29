@@ -104,11 +104,7 @@ This Agreement is governed by the laws of the State of New York and the intellec
    </license>
 
    <includes
-         id="org.eclipse.xtext.example.domainmodel.feature"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.xtext.example.fowlerdsl.feature"
+         id="org.eclipse.xtext.examples"
          version="0.0.0"/>
 
    <requires>

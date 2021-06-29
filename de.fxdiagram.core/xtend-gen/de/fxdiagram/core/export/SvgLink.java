@@ -15,7 +15,7 @@ public class SvgLink {
   
   private final boolean openInNewWindow;
   
-  public final static SvgLink NONE = new SvgLink(null, null, null, false);
+  public static final SvgLink NONE = new SvgLink(null, null, null, false);
   
   public SvgLink(final String href, final String title, final String targetFrame, final boolean openInNewWindow) {
     super();
@@ -33,8 +33,7 @@ public class SvgLink {
     result = prime * result + ((this.href== null) ? 0 : this.href.hashCode());
     result = prime * result + ((this.title== null) ? 0 : this.title.hashCode());
     result = prime * result + ((this.targetFrame== null) ? 0 : this.targetFrame.hashCode());
-    result = prime * result + (this.openInNewWindow ? 1231 : 1237);
-    return result;
+    return prime * result + (this.openInNewWindow ? 1231 : 1237);
   }
   
   @Override

@@ -11,7 +11,7 @@ import de.fxdiagram.core.XRoot;
  */
 @SuppressWarnings("all")
 public interface XDiagramTool {
-  public abstract boolean activate();
+  boolean activate();
   
-  public abstract boolean deactivate();
+  boolean deactivate();
 }

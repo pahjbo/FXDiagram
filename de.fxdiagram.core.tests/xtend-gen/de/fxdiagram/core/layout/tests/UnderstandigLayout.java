@@ -21,7 +21,7 @@ import org.junit.Test;
 
 @SuppressWarnings("all")
 public class UnderstandigLayout extends Application {
-  private final static double EPS = 1e-6;
+  private static final double EPS = 1e-6;
   
   @Test
   public void groupSizes() {

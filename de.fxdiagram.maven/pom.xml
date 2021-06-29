@@ -6,8 +6,8 @@
 	<artifactId>de.fxdiagram.maven</artifactId>
 	<version>0.36.1-SNAPSHOT</version>
 	<properties>
-		<tycho-version>1.0.0</tycho-version>
-		<xtext-version>2.12.0</xtext-version>
+		<tycho-version>1.7.0</tycho-version>
+		<xtext-version>2.22.0</xtext-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<packaging>pom</packaging>
@@ -22,8 +22,10 @@
 		<module>../de.fxdiagram.mapping</module>
 		<module>../de.fxdiagram.eclipse</module>
 		<module>../de.fxdiagram.eclipse.ecore</module>
+<!-- 
 		<module>../de.fxdiagram.eclipse.example</module>
 		<module>../de.fxdiagram.eclipse.examples.feature</module>
+ -->
 		<module>../de.fxdiagram.eclipse.pde</module>
 		<module>../de.fxdiagram.eclipse.xtext</module>
 		<module>../de.fxdiagram.noeclipse</module>
@@ -192,6 +194,17 @@
 								<systemPath>${java.home}/lib/jfxswt.jar</systemPath>
 								<version>8.0.0-SNAPSHOT</version>
 								<scope>system</scope>
+        <exclusions>
+         <exclusion>
+            <groupId>org.eclipse.platform</groupId>
+            <artifactId>org.eclipse.equinox.common</artifactId>
+         </exclusion>
+         <exclusion>
+            <groupId>org.eclipse.platform</groupId>
+            <artifactId>org.eclipse.core.runtime</artifactId>
+         </exclusion>
+      </exclusions>
+                            
 							</extraClasspathElement>
 						</extraClasspathElements>
 					</configuration>
@@ -200,6 +213,24 @@
 					<groupId>org.eclipse.xtend</groupId>
 					<artifactId>xtend-maven-plugin</artifactId>
 					<version>${xtext-version}</version>
+                    <dependencies>
+                    <dependency>
+                        <groupId>org.eclipse.xtext</groupId>
+                        <artifactId>org.eclipse.xtext.xtext.generator</artifactId>
+                        <version>${xtext-version}</version>
+                        <!-- workaround for bug https://github.com/eclipse/xtext/issues/1976 -->
+                        <exclusions>
+                           <exclusion>
+                              <groupId>org.eclipse.platform</groupId>
+                              <artifactId>org.eclipse.equinox.common</artifactId>
+                           </exclusion>
+                           <exclusion>
+                              <groupId>org.eclipse.platform</groupId>
+                              <artifactId>org.eclipse.core.runtime</artifactId>
+                           </exclusion>
+                        </exclusions>
+                     </dependency>
+                    </dependencies>
 					<executions>
 						<execution>
 							<goals>
@@ -263,7 +294,7 @@
 			<groupId>org.eclipse.xtend</groupId>
 			<artifactId>org.eclipse.xtend.lib</artifactId>
 			<version>${xtext-version}</version>
-		</dependency>
+   	</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtend</groupId>
 			<artifactId>org.eclipse.xtend.lib.macro</artifactId>

@@ -170,22 +170,22 @@ public class DiagramGestureTool implements XDiagramTool {
       double _y = pivot.getY();
       final Rotate rotate = new Rotate(_angle, _x, _y);
       final Consumer<XShape> _function_5 = (XShape it_1) -> {
-        final Dimension2D offset = this.getRotateOffset(((XShape)it_1));
-        double _layoutX = ((XShape)it_1).getLayoutX();
+        final Dimension2D offset = this.getRotateOffset(it_1);
+        double _layoutX = it_1.getLayoutX();
         double _width = offset.getWidth();
         double _plus = (_layoutX + _width);
-        double _layoutY = ((XShape)it_1).getLayoutY();
+        double _layoutY = it_1.getLayoutY();
         double _height = offset.getHeight();
         double _plus_1 = (_layoutY + _height);
         final Point2D newPosition = rotate.transform(_plus, _plus_1);
         double _x_1 = newPosition.getX();
         double _width_1 = offset.getWidth();
         double _minus = (_x_1 - _width_1);
-        ((XShape)it_1).setLayoutX(_minus);
+        it_1.setLayoutX(_minus);
         double _y_1 = newPosition.getY();
         double _height_1 = offset.getHeight();
         double _minus_1 = (_y_1 - _height_1);
-        ((XShape)it_1).setLayoutY(_minus_1);
+        it_1.setLayoutY(_minus_1);
       };
       rotateSet.forEach(_function_5);
     };

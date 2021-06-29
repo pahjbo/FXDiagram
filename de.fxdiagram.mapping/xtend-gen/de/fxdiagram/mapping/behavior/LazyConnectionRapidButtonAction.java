@@ -89,7 +89,6 @@ public class LazyConnectionRapidButtonAction<MODEL extends Object, ARG extends O
       return (result).booleanValue();
     } catch (final Throwable _t) {
       if (_t instanceof NoSuchElementException) {
-        final NoSuchElementException e = (NoSuchElementException)_t;
         return false;
       } else {
         throw Exceptions.sneakyThrow(_t);

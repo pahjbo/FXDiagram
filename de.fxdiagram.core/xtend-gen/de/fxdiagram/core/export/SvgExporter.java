@@ -62,9 +62,9 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 @Logging
 @SuppressWarnings("all")
 public class SvgExporter {
-  private final static double PT_TO_PX = (2.0 / 3.0);
+  private static final double PT_TO_PX = (2.0 / 3.0);
   
-  private final static int EXTRA_BORDER = 10;
+  private static final int EXTRA_BORDER = 10;
   
   private int currentID;
   

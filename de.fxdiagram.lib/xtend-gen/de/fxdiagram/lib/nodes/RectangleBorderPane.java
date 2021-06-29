@@ -29,7 +29,7 @@ import org.eclipse.xtext.xbase.lib.Extension;
  */
 @SuppressWarnings("all")
 public class RectangleBorderPane extends StackPane implements SvgExportable {
-  public final static LinearGradient DEFAULT_BACKGROUND = new LinearGradient(
+  public static final LinearGradient DEFAULT_BACKGROUND = new LinearGradient(
     0, 0, 1, 1, 
     true, CycleMethod.NO_CYCLE, 
     Collections.<Stop>unmodifiableList(CollectionLiterals.<Stop>newArrayList(new Stop(0, Color.gray(0.7)), new Stop(1, Color.gray(1)))));

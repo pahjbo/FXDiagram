@@ -23,7 +23,7 @@ import org.eclipse.xtend2.lib.StringConcatenation;
  */
 @SuppressWarnings("all")
 public class ViewportTransform {
-  public final static double MIN_SCALE = NumberExpressionExtensions.EPSILON;
+  public static final double MIN_SCALE = NumberExpressionExtensions.EPSILON;
   
   private Affine transform;
   

@@ -41,7 +41,7 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 @ModelNode
 @SuppressWarnings("all")
 public class BaseNode<T extends Object> extends XNode implements INodeWithLazyMappings {
-  public final static String NODE_HEADING = "nodeHeading";
+  public static final String NODE_HEADING = "nodeHeading";
   
   public BaseNode(final IMappedElementDescriptor<T> descriptor) {
     super(descriptor);

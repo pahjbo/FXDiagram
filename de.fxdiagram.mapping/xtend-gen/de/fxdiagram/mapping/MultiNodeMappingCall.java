@@ -26,8 +26,7 @@ public class MultiNodeMappingCall<RESULT extends Object, ARG extends Object> ext
     final int prime = 31;
     int result = 1;
     result = prime * result + ((this.selector== null) ? 0 : this.selector.hashCode());
-    result = prime * result + ((this.nodeMapping== null) ? 0 : this.nodeMapping.hashCode());
-    return result;
+    return prime * result + ((this.nodeMapping== null) ? 0 : this.nodeMapping.hashCode());
   }
   
   @Override
@@ -56,10 +55,9 @@ public class MultiNodeMappingCall<RESULT extends Object, ARG extends Object> ext
   @Override
   @Pure
   public String toString() {
-    String result = new ToStringBuilder(this)
+    return new ToStringBuilder(this)
     	.addAllFields()
     	.toString();
-    return result;
   }
   
   @Pure

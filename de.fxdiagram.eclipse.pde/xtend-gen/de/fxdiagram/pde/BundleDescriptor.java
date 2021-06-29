@@ -21,7 +21,7 @@ import org.eclipse.xtext.xbase.lib.Functions.Function1;
 @ModelNode({ "symbolicName", "version" })
 @SuppressWarnings("all")
 public class BundleDescriptor extends AbstractMappedElementDescriptor<BundleDescription> {
-  private final static Logger LOG = Logger.getLogger(BundleDescriptor.class);
+  private static final Logger LOG = Logger.getLogger(BundleDescriptor.class);
   
   public BundleDescriptor(final String symbolicName, final String version, final String mappingConfigID, final String mappingID) {
     super(mappingConfigID, mappingID);

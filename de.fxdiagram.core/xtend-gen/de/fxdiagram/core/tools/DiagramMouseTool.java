@@ -142,15 +142,15 @@ public class DiagramMouseTool implements XDiagramTool {
   
   private EventHandler<MouseEvent> releasedHandler;
   
-  private final static int ZOOM_SENSITIVITY = 30;
+  private static final int ZOOM_SENSITIVITY = 30;
   
   private boolean hasDragged = false;
   
   private DiagramMouseTool.State currentState;
   
-  private final static ImageCursor zoomInCursor = new ImageCursor(ImageCache.get().getImage(DiagramMouseTool.class, "zoom_in.png"));
+  private static final ImageCursor zoomInCursor = new ImageCursor(ImageCache.get().getImage(DiagramMouseTool.class, "zoom_in.png"));
   
-  private final static ImageCursor zoomOutCursor = new ImageCursor(ImageCache.get().getImage(DiagramMouseTool.class, "zoom_out.png"));
+  private static final ImageCursor zoomOutCursor = new ImageCursor(ImageCache.get().getImage(DiagramMouseTool.class, "zoom_out.png"));
   
   private Rectangle marquee = new Rectangle();
   

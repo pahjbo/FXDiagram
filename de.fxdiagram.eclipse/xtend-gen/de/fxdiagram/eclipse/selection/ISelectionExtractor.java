@@ -12,12 +12,12 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 
 @SuppressWarnings("all")
 public interface ISelectionExtractor {
-  public interface Acceptor {
-    public abstract boolean accept(final Object selectedElement);
+  interface Acceptor {
+    boolean accept(final Object selectedElement);
   }
   
-  public static class Registry {
-    private final static Logger LOG = Logger.getLogger(ISelectionExtractor.Registry.class);
+  class Registry {
+    private static final Logger LOG = Logger.getLogger(ISelectionExtractor.Registry.class);
     
     private static ISelectionExtractor.Registry INSTANCE;
     
@@ -58,5 +58,5 @@ public interface ISelectionExtractor {
     }
   }
   
-  public abstract boolean addSelectedElement(final IWorkbenchPart activePart, final ISelectionExtractor.Acceptor acceptor);
+  boolean addSelectedElement(final IWorkbenchPart activePart, final ISelectionExtractor.Acceptor acceptor);
 }
